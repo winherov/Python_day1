@@ -1,0 +1,17 @@
+import copy
+
+name=['ZhangYang','XiangPeng','XuLiangchen']
+print(name)
+name.append("Alex")
+name.insert(1,["Aprea","python"])
+
+print (name.index("ZhangYang"))
+
+#del name[0]
+
+print(name)#Alex
+name2=copy.deepcopy(name)
+#name.extend(name2)
+name[-1]="阿里斯"
+print(name2)
+print(name)
