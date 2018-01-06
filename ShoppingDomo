@@ -1,0 +1,44 @@
+# Author:Aprea 
+
+product_list=[
+    ("IphoneX",9800),
+    ("Surface",7688),
+    ("Udatabase",66),
+    ("Pork",178),
+    ("notebook",94),
+]                           #show the item
+cart_item=[]                
+
+salary=input("Please input your salary:")
+while True:
+    if salary.isdigit() :
+        Lsalary=int(salary)
+    else:
+        print("Sorry you input wrong number,please reinput your salary.")
+        continue
+
+    print("What product do you want to buy?")
+    product_index=(input("Please input number what you choose."))
+    if product_index.isdigit():
+        product_opt=int(product_index)
+        if (product_opt)>0 and (product_opt)<=len(product_list):
+            buy_pair=product_list[product_opt]
+            buy_price=buy_pair[1]
+            if buy_price<=Lsalary:
+                cart_item.append(product_list[product_opt])
+                print(cart_item)
+                Lsalary-=buy_price
+            else :
+                print("Your current balance is not enough")
+
+        else:
+            print("You input your wrong number")
+    elif product_index=='q':
+        exit()
+    else:
+        print("You input wrong char")
+
+
+
+
+
